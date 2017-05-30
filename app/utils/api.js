@@ -6,7 +6,6 @@ var sec = creds.githubKeys.secret;
 var params = "?client_id=" + id + "&client_secret=" + sec;
 
 function getProfile(username) {
-  console.log('params is', params);
   return axios.get('https://api.github.com/users/' + username + params)
     .then(function(user) {
       return user.data;
